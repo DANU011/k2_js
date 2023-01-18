@@ -55,10 +55,51 @@ const domRead = () =>{
         if(k==1)break;
 }
 }
+//클릭함수
+const clickBtn = (div0,bt0)=>{
+    bt0.addEventListener("Click",()=>{
+        div0.innerHTML = `<h1>${bt0.innerHTML}</h1>`;
+        console.log(bt0,innerHTML);
+    });
+}
+
+// dom 요소 수정
+const domUpdate=()=>{
+    const div1=document.querySelector("#div1");
+    //div1.innerHTML = "요소를 수정하고 있습니다...";
+    //console.log(div1)
+   /*
+    const bt1 = document.querySelector("#bt1"); 
+    const bt2 = document.querySelector("#bt2");
+    const bt3 = document.querySelector("#bt3");
+    
+    clickBtn(div1,bt1);
+    clickBtn(div1,bt2);
+    clickBtn(div1,bt3);
+    // console.log(bt1.innerHTML)
+    // bt1.addEventListener("click",()=>{
+    //     div1.innerHTML =`<h1>${bt1.innerHTML}</h1>`;
+        //console.log(`<h1>${bt1.innerHTML}</h1>`);    
+    });*/
+
+    const btc= document.querySelectorAll(".btc");
+    console.log(btc)
+    for (let bt of btc)
+        bt.addEventListener("click", ()=>{
+            div1.innerHTML=`<h1>${bt.innerHTML}</h1>`;
+        })
+    }
+    // console.log(bt.innerHTML);
+
+
+
 //자바스크립 랜더링 제어
 document.addEventListener("DOMContentLoaded", () => {
     // DOM요소 생성
     domAdd();
-    // Dom요소 읽기
+    // Dom요소 접근
     domRead();
+
+    //dom요소 변경
+    domUpdate();
 });
