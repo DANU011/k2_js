@@ -102,4 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //dom요소 변경
     domUpdate();
+
+    //dom요소 제거
 });
