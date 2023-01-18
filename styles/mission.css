@@ -41,10 +41,45 @@
      color: #EADDFF;
  }
 
-section{
-     width : 50%;
-     height: 30vh;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+section {
+    width : 50%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+/*radio
+/* Labels for checked inputs */
+input:checked + label {
+    color: red;
+  }
+
+/* Radio element, when checked */
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] + label {
+    display: inline-block;
+    padding: 8px 10px;
+    border: 1px solid #dfdfdf;
+    background-color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #113a6b;
+    color: #ffffff;
+}
+
+fieldset {
+    width: 60%; 
+    padding: 2vw 2vw;
+    font-size: 2vw;
+    border: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
